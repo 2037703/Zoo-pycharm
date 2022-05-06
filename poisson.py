@@ -4,62 +4,58 @@
 ###  Nom:Gabriel Charbonneau
 ###  No étudiant: 2037703
 ###  No Groupe: 00001
-###  Description du fichier: Classe Oiseau
+###  Description du fichier: Classe Poisson
 ####################################################################################
 
-# Importation
 
-#Importation de la classe Animal
+#Importation
+#import la classe animal
 from animal import Animal
 
-#Import json
 
-import json
-
-class Oiseau(Animal):
+class Poisson(Animal):
     """
-    Class Oiseau
+    Class Poisson
     """
 
-    def __init__(self, p_couleur_plumage = "", p_grandeur_oiseau = -1):
+    def __init__(self, p_longueur_poisson = -1, p_machoire_dente = ""):
 
         """
         Méthode de type Constructeur avec paramètres et valeurs par défaut
         Définition des attributs d'un Oiseau
         """
 
-        self.couleur_plumage = p_couleur_plumage
-        self.__grandeur_oiseau = p_grandeur_oiseau
+        self.__longueur_poisson = p_longueur_poisson
+        self.machoire_dente = p_machoire_dente
 
         ##################################################
         ####   Propriétés, accesseurs et mutateurs    ####
         ####                                          ####
         ##################################################
 
-        # Accesseur de l'attribut grandeur_oiseau
+        # Accesseur de l'attribut longueur_poisson
 
-    def _get_grandeur_oiseau(self) -> float:
+    def _get_longueur_poisson(self) -> float:
+
         """
-        Accesseur grandeur_oiseau
+        Accesseur longueur_poisson
         :return: float
         """
 
-        return self.__grandeur_oiseau
+        # Mutateur de l'attribut longueur_poisson
 
-        # Mutateur de l'attribut grandeur_oiseau
-
-    def _set_grandeur_oiseau(self, p_grandeur_oiseau) -> None:
+    def _set_longueur_poisson(self, p_longueur_poisson) -> None:
 
         """
-        Mutateur grandeur_oiseau
+        Mutateur longueur_poisson
         :return: None
         """
-        if p_grandeur_oiseau > 0:
-            self.__grandeur_oiseau = p_grandeur_oiseau
+        if p_longueur_poisson > 0:
+            self.__longueur_poisson = p_longueur_poisson
 
-        # Propriétés de l'attribut grandeur_oiseau
+        # Propriétés de l'attribut longueur_poisson
 
-    Grandeur_oiseau = property(_get_grandeur_oiseau, _set_grandeur_oiseau)
+    Longueur_poisson = property(_get_longueur_poisson, _set_longueur_poisson)
 
     ############################################
     #####          Autres MÉTHODES         #####
