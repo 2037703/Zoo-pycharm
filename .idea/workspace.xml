@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e3a56f4-7ceb-4574-8b62-0f48d3194e6c" name="Changes" comment="Classe animal, mammifere et Oiseau pratiquement terminée">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poisson.py" afterDir="false" />
+    <list default="true" id="1e3a56f4-7ceb-4574-8b62-0f48d3194e6c" name="Changes" comment="Fini la classe poisson">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oiseau.py" beforeDir="false" afterPath="$PROJECT_DIR$/Oiseau.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oiseau.py" beforeDir="false" afterPath="$PROJECT_DIR$/oiseau.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mammifere.py" beforeDir="false" afterPath="$PROJECT_DIR$/mammifere.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poisson.py" beforeDir="false" afterPath="$PROJECT_DIR$/poisson.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
       <workItem from="1651760981244" duration="5004000" />
       <workItem from="1651853191810" duration="4455000" />
       <workItem from="1651859532816" duration="5000" />
-      <workItem from="1651859546336" duration="3077000" />
+      <workItem from="1651859546336" duration="4032000" />
     </task>
     <task id="LOCAL-00001" summary="Classe animal, mammifere et Oiseau pratiquement terminée">
       <created>1651863821274</created>
@@ -88,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651863821274</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fini la classe poisson">
+      <created>1651864509953</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651864509953</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +114,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classe animal, mammifere et Oiseau pratiquement terminée" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classe animal, mammifere et Oiseau pratiquement terminée" />
+    <MESSAGE value="Fini la classe poisson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fini la classe poisson" />
   </component>
 </project>

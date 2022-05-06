@@ -12,6 +12,8 @@
 #import la classe animal
 from animal import Animal
 
+#import json
+import json
 
 class Poisson(Animal):
     """
@@ -82,3 +84,16 @@ class Poisson(Animal):
                     return 1
         except:
             return 2
+
+    # Méthode désérialiser
+
+    def deserialiser(self, p_fichier, p_enclos):
+        """
+            Méthode permttant de désérialiser un objet de la classe Etudiant
+            ::param p_fichier : Le nom du fichier qui contient l'objet sérialisé
+                """
+
+        with open(p_fichier, "r") as fichier:
+            self.__dict__ = json.load(fichier)
+
+        self.enclos = p_enclos
