@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e3a56f4-7ceb-4574-8b62-0f48d3194e6c" name="Changes" comment="Fini la classe poisson">
+      <change afterPath="$PROJECT_DIR$/PopUp_Oiseau.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PopUp_Poisson.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Popup_Animal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Popup_Enclos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oiseau.py" beforeDir="false" afterPath="$PROJECT_DIR$/oiseau.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mammifere.py" beforeDir="false" afterPath="$PROJECT_DIR$/mammifere.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poisson.py" beforeDir="false" afterPath="$PROJECT_DIR$/poisson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +38,39 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cours---4-29" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\info1\PycharmProjects\pythonProject" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\info1\PycharmProjects\Zoo-pycharm\Qt" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Popup_Animal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Popup_Animal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,6 +93,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Popup_Animal" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,6 +112,9 @@
       <workItem from="1651853191810" duration="4455000" />
       <workItem from="1651859532816" duration="5000" />
       <workItem from="1651859546336" duration="4032000" />
+      <workItem from="1652364667820" duration="615000" />
+      <workItem from="1652365959070" duration="9000" />
+      <workItem from="1652365975600" duration="5998000" />
     </task>
     <task id="LOCAL-00001" summary="Classe animal, mammifere et Oiseau pratiquement terminée">
       <created>1651863821274</created>
@@ -116,5 +151,9 @@
     <MESSAGE value="Classe animal, mammifere et Oiseau pratiquement terminée" />
     <MESSAGE value="Fini la classe poisson" />
     <option name="LAST_COMMIT_MESSAGE" value="Fini la classe poisson" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Zoo_pycharm$main.coverage" NAME="main Coverage Results" MODIFIED="1652372004801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Zoo_pycharm$Popup_Animal.coverage" NAME="Popup_Animal Coverage Results" MODIFIED="1652371109347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
