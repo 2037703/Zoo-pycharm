@@ -29,8 +29,8 @@ class Animal:
         self.__id_animal = p_id_animal
         self.__poid_animal = p_poid_animal
         self.__nom_animal = p_nom_animal
-        self.enclos = p_enclos
-        self.regime_animal = p_regime_animal
+        self.Enclos = p_enclos
+        self.Regime_animal = p_regime_animal
 
     ##################################################
     ####   Propriétés, accesseurs et mutateurs    ####
@@ -96,12 +96,12 @@ class Animal:
 
     #Mutateur de nom_animal
 
-    def _set_nom_animal(self, p_nom_animal) -> None:
+    def _set_nom_animal(self, p_nom_animal:str)  -> None:
         """
         Mutateur de nom_animal
         :return: none
         """
-        if p_nom_animal.isalpha():
+        if str(p_nom_animal).isalpha():
             self.__nom_animal = p_nom_animal
 
     #Propriétés de nom_animal

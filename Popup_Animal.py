@@ -15,26 +15,24 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import pyqtSlot
 
 #importation de l'interface
-from Interface import InterfaceAnimal3
+from Interface import InterfaceAnimal7
 
 #Importation des fenêtre de dialog
 
 from Popup_Mammifere import *
+from PopUp_Poisson import *
+from PopUp_Oiseau import *
 
-class PopUpAnimal(QtWidgets.QDialog, InterfaceAnimal3.Ui_Dialog):
+
+
+# Classe
+class PopUpAnimal(QtWidgets.QDialog, InterfaceAnimal7.Ui_Dialog):
+    """
+    Classe PopUpAnimal
+    """
     def __init__(self, parent=None):
         super(PopUpAnimal, self).__init__(parent)
         self.setupUi(self)
-
-
-    # Boutton quitter pour revenir au menu principale
-    @pyqtSlot()
-    def on_button_quitter_animal_clicked(self):
-        """
-        Méthode du bouton Menu principal pour fermer le popup
-        :return: None
-        """
-        self.close()
 
     # Boutton pour ouvrir les création d'animaux  au menu principale
     @pyqtSlot()
@@ -46,7 +44,23 @@ class PopUpAnimal(QtWidgets.QDialog, InterfaceAnimal3.Ui_Dialog):
 
         # Instancier une boite de dialogue
         dialog_Mammifere = PopUpMammifere()
-        dialog_Oiseau = Pop
+        dialog_Poisson = PopUpPoisson()
+        dialog_Oiseau = PopUpOiseau()
         #Afficher la boite de dialogue
         dialog_Mammifere.show()
         dialog_Mammifere.exec_()
+
+        dialog_Poisson.show()
+        dialog_Poisson.exec_()
+
+        dialog_Oiseau.show()
+        dialog_Oiseau.exec_()
+    # Boutton quitter pour revenir au menu principale
+    @pyqtSlot()
+    def on_button_quitter_animal_clicked(self):
+        """
+        Méthode du bouton Menu principal pour fermer le popup
+        :return: None
+        """
+        self.close()
+

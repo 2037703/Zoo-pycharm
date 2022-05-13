@@ -10,6 +10,7 @@
 
 #Importation
 #import la classe animal
+import enclos
 from animal import Animal
 
 #import json
@@ -20,13 +21,13 @@ class Poisson(Animal):
     Class Poisson
     """
 
-    def __init__(self, p_longueur_poisson = -1, p_machoire_dente = ""):
+    def __init__(self,p_id_animal = "", p_poid_animal = -1, p_nom_animal ="", p_enclos = enclos.Enclos(), p_regime_animal ="", p_longueur_poisson = -1, p_machoire_dente = ""):
 
         """
         Méthode de type Constructeur avec paramètres et valeurs par défaut
         Définition des attributs d'un Oiseau
         """
-
+        Animal.__init__(self, p_id_animal, p_poid_animal, p_nom_animal, p_enclos, p_regime_animal)
         self.__longueur_poisson = p_longueur_poisson
         self.machoire_dente = p_machoire_dente
 
@@ -59,6 +60,25 @@ class Poisson(Animal):
 
     Longueur_poisson = property(_get_longueur_poisson, _set_longueur_poisson)
 
+
+    ############################################
+    #####  MÉTHODES SPÉCIALES OU MAGIQUES  #####
+    ############################################
+    # Inspirer de Hasna Hocini
+    def __str__(self) :
+        """
+                Méthode spéciale d'affichage. À utiliser avec print(objet)
+                :return: Chaine à afficher
+        """
+        chaine = " "*60+"\n"+"*"*60+"\n\n"+"   L'id de l'animal' : "+str(self.Id_animal)+"\n"+\
+                 "   Le nom de l'étudiant : "+str(self.Poid_animal)+"\n"+\
+                "   Le programme de l'étudiant : "+self.Nom_animal+"\n"+\
+                 "   La date de naissance de l'étudiant : "+str(self.enclos.Id_enclos) +"\n" +\
+                 "  Le regime de l'animal "+ self.regime_animal+"\n" + \
+                "  La couleur du mammifère " + str(self.Longueur_poisson) + "\n" + \
+                "   Le casier de l'étudiant : " + self.machoire_dente + "\n\n" +"*"*60
+        return chaine
+
     ############################################
     #####          Autres MÉTHODES         #####
     ############################################
@@ -72,7 +92,7 @@ class Poisson(Animal):
                        1 s'il y a erreur d'écriture et 2 s'il y a erreur d'ouverture
 
         """
-        self.__dict__["_Animal_enclos"]=str(self.Enclos.Id_enclos)
+        self.__dict__["Enclos"]=str(self.Enclos.Id_enclos)
 
         try:
             with open(p_fichier , "w") as fichier:
