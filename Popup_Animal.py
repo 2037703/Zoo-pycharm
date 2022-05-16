@@ -35,26 +35,37 @@ class PopUpAnimal(QtWidgets.QDialog, InterfaceAnimal7.Ui_Dialog):
         self.setupUi(self)
 
     # Boutton pour ouvrir les création d'animaux  au menu principale
+
+
     @pyqtSlot()
     def on_Button_Choisir_animal_clicked(self):
         """
         Boutton qui ouvre les popup de création d'animaux
         :return: None
         """
+        if self.comboBox_Animal.currentText() == "Mammifère":
+            # Instancier une boite de dialogue
+            dialog_Mammifere = PopUpMammifere()
+            #Afficher la boite de dialogue
+            dialog_Mammifere.show()
+            dialog_Mammifere.exec_()
 
-        # Instancier une boite de dialogue
-        dialog_Mammifere = PopUpMammifere()
-        dialog_Poisson = PopUpPoisson()
-        dialog_Oiseau = PopUpOiseau()
-        #Afficher la boite de dialogue
-        dialog_Mammifere.show()
-        dialog_Mammifere.exec_()
+        elif self.comboBox_Animal.currentText() == "Poisson":
 
-        dialog_Poisson.show()
-        dialog_Poisson.exec_()
+         # Instancier une boite de dialogue
+            dialog_Poisson = PopUpPoisson()
 
-        dialog_Oiseau.show()
-        dialog_Oiseau.exec_()
+            dialog_Poisson.show()
+            dialog_Poisson.exec_()
+
+
+        elif self.comboBox_Animal.currentText() == "Oiseau":
+            # Instancier une boite de dialogue
+            dialog_Oiseau = PopUpOiseau()
+
+            dialog_Oiseau.show()
+            dialog_Oiseau.exec_()
+
     # Boutton quitter pour revenir au menu principale
     @pyqtSlot()
     def on_button_quitter_animal_clicked(self):
