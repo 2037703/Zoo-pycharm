@@ -79,7 +79,7 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
         cacher_labels_erreur(self)
         # Instancier un objet Eudiant
         enclos = Enclos()
-        # Entrée de donnée pour les attributs de l'objet Etudiant
+        # Entrée de donnée pour les attributs de l'objet enclos
         enclos.Id_enclos = self.lineEdit_id_enclos.text()
         enclos.Habitat_naturel = self.comboBox_habitat_enclos.currentText()
         enclos.Dimension = self.comboBox_dimension_enclos.currentText()
@@ -95,10 +95,10 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
             self.lineEdit_id_enclos.clear()
 
         else:
-            # Effacer le lineEdit du numéro étudiant et afficher le message d'erreur
+            # Effacer le lineEdit du numéro d'enclos et afficher le message d'erreur
             self.lineEdit_id_enclos.clear()
             self.label_err_id_enclos.setVisible(True)
-            # Réinitialiser les lineEdits du nom, du numéro d'étudiant et du dateEdit
+            # Réinitialiser les lineEdits
             self.lineEdit_id_enclos.clear()
 
         model_list_view_animaux(self)

@@ -107,7 +107,7 @@ class Mammifere(Animal):
 
     def deserialiser(self, p_fichier, ):
         """
-            Méthode permttant de désérialiser un objet de la classe Etudiant
+            Méthode permttant de désérialiser un objet de la classe mammifere
             ::param p_fichier : Le nom du fichier qui contient l'objet sérialisé
             ::param p_enclos  : Le
                 """

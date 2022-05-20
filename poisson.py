@@ -92,7 +92,7 @@ class Poisson(Animal):
 
     def deserialiser(self, p_fichier, p_enclos):
         """
-            Méthode permttant de désérialiser un objet de la classe Etudiant
+            Méthode permttant de désérialiser un objet de la classe poisson
             ::param p_fichier : Le nom du fichier qui contient l'objet sérialisé
                 """
 

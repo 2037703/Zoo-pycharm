@@ -176,7 +176,7 @@ class PopUpPoisson(QtWidgets.QDialog, InterfacePoisson7.Ui_Dialog):
 
         poiss = Poisson()
 
-        print("début")
+
         # Entrée de donnée pour les attributs de l'objet mammifere
         poiss.Id_animal = self.popupAnimal.lineEdit_id_animal.text()
         poiss.Enclos = self.popupAnimal.comboBox_enclos_animal.currentText()
