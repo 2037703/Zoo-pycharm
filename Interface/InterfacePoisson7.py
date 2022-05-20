@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -30,7 +31,13 @@ class Ui_Dialog(object):
         self.button_supprim_poisson.setFont(font)
         self.button_supprim_poisson.setObjectName("button_supprim_poisson")
         self.comboBox_machoire_poisson = QtWidgets.QComboBox(Dialog)
+        font = QtGui.QFont()
+        font.setFamily("Rockwell")
+        font.setPointSize(17)
+        self.comboBox_machoire_poisson.setFont(font)
         self.comboBox_machoire_poisson.setGeometry(QtCore.QRect(20, 130, 171, 41))
+        self.comboBox_machoire_poisson.addItem("Oui")
+        self.comboBox_machoire_poisson.addItem("Non")
         self.comboBox_machoire_poisson.setObjectName("comboBox_machoire_poisson")
         self.label_7 = QtWidgets.QLabel(Dialog)
         self.label_7.setGeometry(QtCore.QRect(20, 10, 371, 51))
@@ -50,6 +57,9 @@ class Ui_Dialog(object):
         self.label_err_longueur_poisson = QtWidgets.QLabel(Dialog)
         self.label_err_longueur_poisson.setGeometry(QtCore.QRect(20, 310, 221, 41))
         self.label_err_longueur_poisson.setObjectName("label_err_longueur_poisson")
+        self.label_err_id_poiss = QtWidgets.QLabel(Dialog)
+        self.label_err_id_poiss.setGeometry(QtCore.QRect(210, 78, 291, 41))
+        self.label_err_id_poiss.setObjectName("label_err_id_poiss")
         self.label_id_12 = QtWidgets.QLabel(Dialog)
         self.label_id_12.setGeometry(QtCore.QRect(20, 200, 181, 61))
         font = QtGui.QFont()
@@ -100,6 +110,7 @@ class Ui_Dialog(object):
         self.label_7.setText(_translate("Dialog", "Création d\'un poisson"))
         self.label_id_11.setText(_translate("Dialog", "Machoire dentée "))
         self.label_err_longueur_poisson.setText(_translate("Dialog", "<html><head/><body><p><span style=\" color:#ff0000;\">Doit être supérieure à zéro</span></p></body></html>"))
+        self.label_err_id_poiss.setText(_translate("Dialog", "<html><head/><body><p><span style=\" color:#ff0000;\">Vous essayer d'écraser un animal</span></p><p><span style=\" color:#ff0000;\"> veuillez changer l'id ou appuyer sur le boutton modiffier</span></p></body></html>"))
         self.label_id_12.setText(_translate("Dialog", "<html><head/><body><p>Longueur du</p><p>poisson (po)</p></body></html>"))
         self.button_modif_poisson.setText(_translate("Dialog", "Modifier"))
         self.button_cancel_poisson.setText(_translate("Dialog", "Cancel"))

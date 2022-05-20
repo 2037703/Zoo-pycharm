@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(494, 468)
+        Dialog.resize(650, 468)
         self.label_7 = QtWidgets.QLabel(Dialog)
         self.label_7.setGeometry(QtCore.QRect(20, 10, 371, 51))
         font = QtGui.QFont()
@@ -71,7 +71,7 @@ class Ui_Dialog(object):
         font.setPointSize(16)
         self.comboBox_dimension_enclos.setFont(font)
         self.listView_enclos = QtWidgets.QListView(Dialog)
-        self.listView_enclos.setGeometry(QtCore.QRect(250, 111, 211, 281))
+        self.listView_enclos.setGeometry(QtCore.QRect(250, 111, 361, 281))
         self.listView_enclos.setObjectName("listView_enclos")
         self.label_id_10 = QtWidgets.QLabel(Dialog)
         self.label_id_10.setGeometry(QtCore.QRect(250, 70, 171, 31))
@@ -81,7 +81,7 @@ class Ui_Dialog(object):
         self.label_id_10.setFont(font)
         self.label_id_10.setObjectName("label_id_10")
         self.button_quitter_enclos = QtWidgets.QPushButton(Dialog)
-        self.button_quitter_enclos.setGeometry(QtCore.QRect(320, 410, 141, 41))
+        self.button_quitter_enclos.setGeometry(QtCore.QRect(490, 410, 141, 41))
         font = QtGui.QFont()
         font.setFamily("Tw Cen MT Condensed Extra Bold")
         font.setPointSize(16)

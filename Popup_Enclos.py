@@ -29,9 +29,9 @@ from logique import *
 #######################################
 def verifier_Id_enclos_liste(p_Id_enclos):
     """
-         Vérifie si l'étudiant existe dans la liste des étudiants
-             :param p_Id:  le numéro d'étudiant
-             :return: True si l'étudiant est trouvé dans la liste des étudiants et False sinon
+         Vérifie si l'enclos existe dans la listes des enclos
+             :param p_Id:  le numero de l'enclos
+             :return: True si l'enclos est dans la liste
     """
     for ecl in Ls_Enclos:
         if ecl.Id_enclos == p_Id_enclos:
@@ -54,7 +54,12 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
     def __init__(self,  parent=None ):
         super(PopUpEnclos, self).__init__(parent)
         self.setupUi(self)
-
+        # Préparer la listview
+        model = QStandardItemModel()
+        self.listView_enclos.setModel(model)
+        for cls in Ls_Enclos:
+            item = QStandardItem(cls.Id_enclos+" * "+cls.Habitat_naturel + " * " + cls.Dimension )
+            model.appendRow(item)
         cacher_labels_erreur(self)
     # Boutton créer pour créer un enclos
     @pyqtSlot()
@@ -71,15 +76,15 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
         enclos.Id_enclos = self.lineEdit_id_enclos.text()
         enclos.Habitat_naturel = self.comboBox_habitat_enclos.currentText()
         enclos.Dimension = self.comboBox_dimension_enclos.currentText()
-        # Booleen qui nous informe si le numéro d'étudiant existe ou pas dans la liste des étudiants
+        # Booleen qui nous informe si le numéro de l'enclos existe ou pas dans la liste des enclos
         verifier_enclos = verifier_Id_enclos_liste(enclos.Id_enclos)
         if verifier_enclos is False:
-            print("verif")
+
 
             # Ajouter l'objet instancié à la liste des enclos
             Ls_Enclos.append(enclos)
-            print("Wow")
-            # Réinitialiser les lineEdits du nom, du numéro d'étudiant et du dateEdit
+
+            # Réinitialiser les lineEdits du numéro d'enclos
             self.lineEdit_id_enclos.clear()
 
         else:
@@ -89,8 +94,7 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
             # Réinitialiser les lineEdits du nom, du numéro d'étudiant et du dateEdit
             self.lineEdit_id_enclos.clear()
 
-        print("Wow2")
-        print(Ls_Enclos)
+
         # Préparer la listview
         model = QStandardItemModel()
         self.listView_enclos.setModel(model)

@@ -29,7 +29,7 @@ class Poisson(Animal):
         """
         Animal.__init__(self, p_id_animal, p_poid_animal, p_nom_animal, p_enclos, p_regime_animal)
         self.__longueur_poisson = p_longueur_poisson
-        self.machoire_dente = p_machoire_dente
+        self.Machoire_dente = p_machoire_dente
 
         ##################################################
         ####   Propriétés, accesseurs et mutateurs    ####
@@ -45,6 +45,7 @@ class Poisson(Animal):
         :return: float
         """
 
+        return self.__longueur_poisson
         # Mutateur de l'attribut longueur_poisson
 
     def _set_longueur_poisson(self, p_longueur_poisson) -> None:

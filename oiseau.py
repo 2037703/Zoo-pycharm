@@ -29,7 +29,7 @@ class Oiseau(Animal):
         Définition des attributs d'un Oiseau
         """
         Animal.__init__(self, p_id_animal, p_poid_animal, p_nom_animal, p_enclos, p_regime_animal)
-        self.couleur_plumage = p_couleur_plumage
+        self.Couleur_plumage = p_couleur_plumage
         self.__grandeur_oiseau = p_grandeur_oiseau
 
         ##################################################
@@ -76,7 +76,7 @@ class Oiseau(Animal):
                 "   Le nom de l'animal : "+self.Nom_animal+"\n"+\
                  "  L'id de l'enclos : "+str(self.enclos.Id_enclos) +"\n" +\
                  "  Le regime de l'animal "+ self.regime_animal+"\n" + \
-                "  La couleur du plumage " + self.couleur_plumage + "\n" + \
+                "  La couleur du plumage " + self.Couleur_plumage + "\n" + \
                 "   La grandeur du oiseau : " + self.Grandeur_oiseau + "\n" +"*"*60
         return chaine
 
