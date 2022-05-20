@@ -63,37 +63,19 @@ class Poisson(Animal):
 
 
     ############################################
-    #####  MÉTHODES SPÉCIALES OU MAGIQUES  #####
-    ############################################
-    # Inspirer de Hasna Hocini
-    def __str__(self) :
-        """
-                Méthode spéciale d'affichage. À utiliser avec print(objet)
-                :return: Chaine à afficher
-        """
-        chaine = " "*60+"\n"+"*"*60+"\n\n"+"   L'id de l'animal' : "+str(self.Id_animal)+"\n"+\
-                 "   Le nom de l'étudiant : "+str(self.Poid_animal)+"\n"+\
-                "   Le programme de l'étudiant : "+self.Nom_animal+"\n"+\
-                 "   La date de naissance de l'étudiant : "+str(self.enclos.Id_enclos) +"\n" +\
-                 "  Le regime de l'animal "+ self.regime_animal+"\n" + \
-                "  La couleur du mammifère " + str(self.Longueur_poisson) + "\n" + \
-                "   Le casier de l'étudiant : " + self.machoire_dente + "\n\n" +"*"*60
-        return chaine
-
-    ############################################
     #####          Autres MÉTHODES         #####
     ############################################
     # Code pris de l'exercice cours et adapter pour le projet synthèse
     # Méthode sérialiser
     def serialiser(self, p_fichier):
         """
-           Méthode permttant de sérialiser un objet de la classe Etudiant
+           Méthode permttant de sérialiser un objet de la classe Poisson
            ::param p_fichier : Le nom du fichier qui contiendra l'objet sérialisé
            :: return : retourne 0 si le fichier est ouvert et les informations y sont écrites,
                        1 s'il y a erreur d'écriture et 2 s'il y a erreur d'ouverture
 
         """
-        self.__dict__["Enclos"]=str(self.Enclos.Id_enclos)
+        self.__dict__["Enclos"]=str(self.enclos.Enclos)
 
         try:
             with open(p_fichier , "w") as fichier:

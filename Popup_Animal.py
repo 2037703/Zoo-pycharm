@@ -53,7 +53,7 @@ def model_list_view_animaux(objet):
         elif Dict_animal[type(ani)] == "Poisson":
             item = QStandardItem("Id: " + ani.Id_animal + " * " + Dict_animal[
                 type(ani)] + " * " + ani.Nom_animal + " * Dent: " + ani.Machoire_dente + " * Poid:" + str(
-                ani.Poid_animal) + " Lbs * " + str(
+                ani.Poid_animal) + " Lbs * Longueur" + str(
                 ani.Longueur_poisson) + " po * Régime:" + ani.Regime_animal + " * Enclos: " + str(ani.Enclos))
             model.appendRow(item)
 

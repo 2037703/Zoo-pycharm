@@ -12,7 +12,9 @@ class Enclos:
     Classe Enclos
     """
 
-    def __init__(self, p_habitat_naturel = "", p_Dimension = "", p_id_enclos = "", p_Ls_animaux = []):
+
+
+    def __init__(self, p_habitat_naturel = "", p_Dimension = "", p_id_enclos = "", p_Ls_animaux= []):
         """
         Méthode constructeur
         Définition des attributs de la classe Enclos

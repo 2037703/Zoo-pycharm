@@ -38,6 +38,13 @@ def verifier_Id_enclos_liste(p_Id_enclos):
             return True
     return False
 
+def model_list_view_animaux(objet):
+    # Préparer la listview
+    model = QStandardItemModel()
+    objet.listView_enclos.setModel(model)
+    for cls in Ls_Enclos:
+        item = QStandardItem(cls.Id_enclos + " * " + cls.Habitat_naturel + " * " + cls.Dimension)# + " * " + cls.Ls_animaux)
+        model.appendRow(item)
 
 
 def cacher_labels_erreur(objet):
@@ -54,13 +61,13 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
     def __init__(self,  parent=None ):
         super(PopUpEnclos, self).__init__(parent)
         self.setupUi(self)
-        # Préparer la listview
-        model = QStandardItemModel()
-        self.listView_enclos.setModel(model)
-        for cls in Ls_Enclos:
-            item = QStandardItem(cls.Id_enclos+" * "+cls.Habitat_naturel + " * " + cls.Dimension )
-            model.appendRow(item)
         cacher_labels_erreur(self)
+        model_list_view_animaux(self)
+
+        #Rendue Ici essaie de transferrer les animaux dans la liste d'enclos
+        for ani in Ls_Animal_animal:
+            Enclos.Ls_animaux.append(ani.Id_animal)
+
     # Boutton créer pour créer un enclos
     @pyqtSlot()
     def on_button_creer_enclos_clicked(self):
@@ -94,13 +101,8 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
             # Réinitialiser les lineEdits du nom, du numéro d'étudiant et du dateEdit
             self.lineEdit_id_enclos.clear()
 
+        model_list_view_animaux(self)
 
-        # Préparer la listview
-        model = QStandardItemModel()
-        self.listView_enclos.setModel(model)
-        for cls in Ls_Enclos:
-            item = QStandardItem(cls.Id_enclos+" * "+cls.Habitat_naturel + " * " + cls.Dimension )
-            model.appendRow(item)
 
     # Boutton quitter pour revenir au menu principale
     @pyqtSlot()

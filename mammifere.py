@@ -69,23 +69,6 @@ class Mammifere(Animal):
     Temps_de_gestation = property(_get_temps_de_gestation, _set_temps_de_gestation)
 
 
-    ############################################
-    #####  MÉTHODES SPÉCIALES OU MAGIQUES  #####
-    ############################################
-    # Inspirer de Hasna Hocini
-    def __str__(self) :
-        """
-                Méthode spéciale d'affichage. À utiliser avec print(objet)
-                :return: Chaine à afficher
-        """
-        chaine = " "*60+"\n"+"*"*60+"\n\n"+"   L'id de l'animal' : "+str(self.Id_animal)+"\n"+\
-                 "   Le poid de l'animal : "+str(self.Poid_animal)+"\n"+\
-                "   Le nom de l'animal : "+self.Nom_animal+"\n"+\
-                 "   L'id de l'enclos : "+str(self.enclos.Id_enclos) +"\n" +\
-                 "  Le regime de l'animal "+ self.regime_animal+"\n" + \
-                "  La couleur du mammifère " + self.couleur_mammifere + "\n" + \
-                "   Le temps de gestation : " + self.Temps_de_gestation + "\n\n" +"*"*60
-        return chaine
 
 
     ############################################
@@ -94,18 +77,23 @@ class Mammifere(Animal):
 
     # Code pris de l'exercice cours et adapter pour le projet synthèse
     # Méthode sérialiser
-    def serialiser(self, p_fichier):
+    def serialiser(self,p_fichier):
         """
-           Méthode permttant de sérialiser un objet de la classe Etudiant
+           Méthode permttant de sérialiser un objet de la classe Mammifere
            ::param p_fichier : Le nom du fichier qui contiendra l'objet sérialisé
            :: return : retourne 0 si le fichier est ouvert et les informations y sont écrites,
                        1 s'il y a erreur d'écriture et 2 s'il y a erreur d'ouverture
 
         """
-        self.__dict__["Enclos"]=str(self.Enclos.Id_enclos)
+
+
+
+
+        self.__dict__['Enclos']=str(enclos.Enclos)
 
         try:
             with open(p_fichier , "w") as fichier:
+
                 try:
                     #json.dump(self.__dict__, fichier)
                     json.dump(self.__dict__, fichier)
@@ -117,7 +105,7 @@ class Mammifere(Animal):
 
     # Méthode désérialiser
 
-    def deserialiser(self, p_fichier, p_enclos):
+    def deserialiser(self, p_fichier, ):
         """
             Méthode permttant de désérialiser un objet de la classe Etudiant
             ::param p_fichier : Le nom du fichier qui contient l'objet sérialisé
@@ -127,4 +115,3 @@ class Mammifere(Animal):
         with open(p_fichier, "r") as fichier:
             self.__dict__ = json.load(fichier)
 
-        self.enclos = p_enclos

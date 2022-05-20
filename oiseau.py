@@ -62,24 +62,6 @@ class Oiseau(Animal):
 
     Grandeur_oiseau = property(_get_grandeur_oiseau, _set_grandeur_oiseau)
 
-    ############################################
-    #####  MÉTHODES SPÉCIALES OU MAGIQUES  #####
-    ############################################
-    # Inspirer de Hasna Hocini
-    def __str__(self) :
-        """
-                Méthode spéciale d'affichage. À utiliser avec print(objet)
-                :return: Chaine à afficher
-        """
-        chaine = " "*60+"\n"+"*"*60+"\n\n"+"   L'id de l'animal' : "+str(self.Id_animal)+"\n"+\
-                 "   Le poid de l'animal : "+str(self.Poid_animal)+"\n"+\
-                "   Le nom de l'animal : "+self.Nom_animal+"\n"+\
-                 "  L'id de l'enclos : "+str(self.enclos.Id_enclos) +"\n" +\
-                 "  Le regime de l'animal "+ self.regime_animal+"\n" + \
-                "  La couleur du plumage " + self.Couleur_plumage + "\n" + \
-                "   La grandeur du oiseau : " + self.Grandeur_oiseau + "\n" +"*"*60
-        return chaine
-
 
 
 
