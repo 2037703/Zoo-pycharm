@@ -64,9 +64,9 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
         cacher_labels_erreur(self)
         model_list_view_animaux(self)
 
-        #Rendue Ici essaie de transferrer les animaux dans la liste d'enclos
-        for ani in Ls_Animal_animal:
-            Enclos.Ls_animaux.append(ani.Id_animal)
+        # #Rendue Ici essaie de transferrer les animaux dans la liste d'enclos
+        # for ani in Ls_Animal_animal:
+        #     Enclos.Ls_animaux.append(ani.Id_animal)
 
     # Boutton créer pour créer un enclos
     @pyqtSlot()

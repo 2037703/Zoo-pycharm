@@ -1,1 +1,1 @@
-{"_Animal__id_animal": "1234567", "_Animal__poid_animal": 123.0, "_Animal__nom_animal": "dwa", "Enclos": "<class 'enclos.Enclos'>", "Regime_animal": "Carnivore", "Couleur_mammifere": "Bleu", "_Mammifere__temps_de_gestation": 1}
+{"_Animal__id_animal": "1234567", "_Animal__poid_animal": 213.0, "_Animal__nom_animal": "dwa", "Enclos": "<class 'enclos.Enclos'>", "Regime_animal": "Carnivore", "Couleur_mammifere": "Bleu", "_Mammifere__temps_de_gestation": 2}

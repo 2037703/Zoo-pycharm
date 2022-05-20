@@ -170,6 +170,7 @@ class PopUpPoisson(QtWidgets.QDialog, InterfacePoisson7.Ui_Dialog):
                 Méthode de boutton permettant de séréaliser un objet
                 :return: None
                 """
+
         # Cacher les labels qui affichent les différentes erreurs
         cacher_labels_erreur(self)
         # Instancier un objet mammifere et d'un enclos
@@ -178,18 +179,20 @@ class PopUpPoisson(QtWidgets.QDialog, InterfacePoisson7.Ui_Dialog):
 
 
         # Entrée de donnée pour les attributs de l'objet mammifere
-        poiss.Id_animal = self.popupAnimal.lineEdit_id_animal.text()
-        poiss.Enclos = self.popupAnimal.comboBox_enclos_animal.currentText()
-        poiss.Nom_animal = self.popupAnimal.lineEdit_nom_animal.text()
+        poiss.Id_animal = self.popupPoisson.lineEdit_id_animal.text()
+
+        poiss.Enclos = self.popupPoisson.comboBox_enclos_animal.currentText()
+
+        poiss.Nom_animal = self.popupPoisson.lineEdit_nom_animal.text()
 
         # Booleen qui nous informe si le numéro d'id existe ou pas dans la liste des oiseau
-        verif_id = verifier_id_animal_liste(self.popupAnimal.lineEdit_id_animal.text())
+        verif_id = verifier_id_animal_liste(self.popupPoisson.lineEdit_id_animal.text())
 
         if verif_id == True:
 
             for ani in Ls_Animal_animal:
                 if ani.Id_animal == poiss.Id_animal:
-                    if Dict_animal[type(ani)] == "Mammifère":
+                    if Dict_animal[type(ani)] == "Poisson":
 
                         # Séréaliser cet objet
                         result = ani.serialiser(f"{poiss.Id_animal} - {poiss.Nom_animal} .json")
@@ -203,41 +206,41 @@ class PopUpPoisson(QtWidgets.QDialog, InterfacePoisson7.Ui_Dialog):
                         elif result == 1:
                             self.label_err_general_poiss.setText(
                                 "<font color=\"#ff0000\">L'écriture du fichier à échouer</font>")
-                            self.label_err_general_mam.setVisible(True)
+                            self.label_err_general_poiss.setVisible(True)
 
                         elif result == 2:
                             self.label_err_general_poiss.setText(
                                 "<font color=\"#ff0000\">L'ouverture du fichier à échouer</font>")
-                            self.label_err_general_mam.setVisible(True)
+                            self.label_err_general_poiss.setVisible(True)
 
 
         else:
 
             self.label_err_general_poiss.setText(
                 "<font color=\"#ff0000\">Le mammifère que vous essayer de séréaliser </span></p><p><span style=\" color:#ff0000;\"> ne fais pas partie de la liste</font>")
-
+            self.label_err_general_poiss.setVisible(True)
 
     # Boutton pour désérialiser le fichier json
-    def on_button_deserialiser_mammifere_clicked(self):
+    def on_button_deserialiser_poisson_clicked(self):
         """
         Méthode du boutton deserialiser qui permet de desérialiser un fichier séréaliser
         :return: None
         """
+
         poissT = Poisson()
 
-        poissT.Id_animal = self.popupAnimal.lineEdit_id_animal.text()
-        poissT.Nom_animal = self.popupAnimal.lineEdit_nom_animal.text()
+        poissT.Id_animal = self.popupPoisson.lineEdit_id_animal.text()
+        poissT.Nom_animal = self.popupPoisson.lineEdit_nom_animal.text()
 
         poissT.deserialiser(f"{poissT.Id_animal} - {poissT.Nom_animal} .json")
 
         self.doubleSpinBox_longueur_poisson.setValue(poissT.Longueur_poisson)
         self.comboBox_machoire_poisson.setCurrentText(poissT.Machoire_dente)
-        self.popupAnimal.lineEdit_id_animal.setText(poissT.Id_animal)
-        self.popupAnimal.lineEdit_nom_animal.setText(poissT.Nom_animal)
-        self.popupAnimal.lineEdit_poid_animal.setText(str(poissT.Poid_animal))
-        self.popupAnimal.comboBox_enclos_animal.setCurrentText(poissT.Enclos)
-        self.popupAnimal.comboBox_regime_animal.setCurrentText(poissT.Regime_animal)
-
+        self.popupPoisson.lineEdit_id_animal.setText(poissT.Id_animal)
+        self.popupPoisson.lineEdit_nom_animal.setText(poissT.Nom_animal)
+        self.popupPoisson.lineEdit_poid_animal.setText(str(poissT.Poid_animal))
+        self.popupPoisson.comboBox_enclos_animal.setCurrentText(poissT.Enclos)
+        self.popupPoisson.comboBox_regime_animal.setCurrentText(poissT.Regime_animal)
 
     @pyqtSlot()
     def on_button_cancel_poisson_clicked(self):
@@ -249,5 +252,5 @@ class PopUpPoisson(QtWidgets.QDialog, InterfacePoisson7.Ui_Dialog):
 
     # Test de sérialisation
     #poiss1.serialiser("a2")
-    poiss1.deserialiser("a2", Enclos2)
+    #poiss1.deserialiser("a2", Enclos2)
 

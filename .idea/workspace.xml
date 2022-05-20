@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1e3a56f4-7ceb-4574-8b62-0f48d3194e6c" name="Changes" comment="Tout fini pratiquement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1234567 - dwa .json" beforeDir="false" afterPath="$PROJECT_DIR$/1234567 - dwa .json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PopUp_Poisson.py" beforeDir="false" afterPath="$PROJECT_DIR$/PopUp_Poisson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Popup_Enclos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Popup_Enclos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mammifere.py" beforeDir="false" afterPath="$PROJECT_DIR$/mammifere.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poisson.py" beforeDir="false" afterPath="$PROJECT_DIR$/poisson.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,10 +189,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PopUp_Poisson" />
         <item itemvalue="Python.Popup_Enclos" />
         <item itemvalue="Python.Popup_Mammifere" />
         <item itemvalue="Python.mammifere" />
-        <item itemvalue="Python.PopUp_Poisson" />
         <item itemvalue="Python.InterfaceEnclos10" />
       </list>
     </recent_temporary>
@@ -253,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653073359263</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Tout fini pratiquement">
+      <created>1653077506222</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653077506222</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

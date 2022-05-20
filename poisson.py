@@ -75,7 +75,8 @@ class Poisson(Animal):
                        1 s'il y a erreur d'écriture et 2 s'il y a erreur d'ouverture
 
         """
-        self.__dict__["Enclos"]=str(self.enclos.Enclos)
+
+        self.__dict__["Enclos"]=str(enclos.Enclos)
 
         try:
             with open(p_fichier , "w") as fichier:
@@ -90,13 +91,12 @@ class Poisson(Animal):
 
     # Méthode désérialiser
 
-    def deserialiser(self, p_fichier, p_enclos):
+    def deserialiser(self, p_fichier):
         """
             Méthode permttant de désérialiser un objet de la classe poisson
             ::param p_fichier : Le nom du fichier qui contient l'objet sérialisé
                 """
-
+        print("dé")
         with open(p_fichier, "r") as fichier:
             self.__dict__ = json.load(fichier)
-
-        self.enclos = p_enclos
+            print("end")
