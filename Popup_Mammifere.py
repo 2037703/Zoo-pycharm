@@ -93,6 +93,10 @@ class PopUpMammifere(QtWidgets.QDialog, InterfaceMammifere7.Ui_Mammifere):
         mam.Nom_animal = self.popupAnimal.lineEdit_nom_animal.text()
         mam.Poid_animal = float(self.popupAnimal.lineEdit_poid_animal.text())
         mam.Enclos = self.popupAnimal.comboBox_enclos_animal.currentText()
+        # for elem in Ls_Enclos:
+        #     if elem.Id_enclos == self.popupAnimal.comboBox_enclos_animal.currentText():
+        #         mam.Enclos = elem
+        #         elem.Ls_animaux.append(mam)
         mam.Regime_animal = self.popupAnimal.comboBox_regime_animal.currentText()
 
 
