@@ -16,7 +16,7 @@ from PyQt5.QtCore import pyqtSlot
 from Interface import InterfacePoisson7
 
 #Import logique
-from logique import Ls_Animal_animal, Dict_animal
+from logique import Ls_Animal_animal, Dict_animal, Ls_Enclos
 #Import de classes
 from enclos import *
 from poisson import Poisson
@@ -99,6 +99,10 @@ class PopUpPoisson(QtWidgets.QDialog, InterfacePoisson7.Ui_Dialog):
 
         # Ajouter l'objet instancié à la liste des enclos
         if success == True:
+            for elem in Ls_Enclos:
+                if elem.Id_enclos == self.popupPoisson.comboBox_enclos_animal.currentText():
+                    poiss.Enclos = elem
+                    elem.Ls_animaux.append(poiss.Nom_animal)
             Ls_Animal_animal.append(poiss)
 
 
@@ -143,7 +147,11 @@ class PopUpPoisson(QtWidgets.QDialog, InterfacePoisson7.Ui_Dialog):
                 if ani.Id_animal == poiss.Id_animal:
                     if success == True:
                         Ls_Animal_animal.remove(ani)
-                        Ls_Animal_animal.append(poiss)
+                        for elem in Ls_Enclos:
+                            if elem.Id_enclos == self.popupPoisson.comboBox_enclos_animal.currentText():
+                                poiss.Enclos = elem
+                                elem.Ls_animaux.append(poiss.Nom_animal)
+                                Ls_Animal_animal.append(poiss)
 
 
 

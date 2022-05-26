@@ -8,7 +8,7 @@
 ####################################################################################
 #Import Logique
 
-from logique import Ls_Animal_animal, Dict_animal
+from logique import Ls_Animal_animal, Dict_animal, Ls_Enclos
 
 #importation outils PyQt5
 from PyQt5 import QtWidgets
@@ -93,6 +93,10 @@ class PopUpOiseau(QtWidgets.QDialog, InterfaceOiseau7.Ui_Dialog):
 
         # Ajouter l'objet instancié à la liste des enclos
         if success == True:
+            for elem in Ls_Enclos:
+                if elem.Id_enclos == self.popupOiseau.comboBox_enclos_animal.currentText():
+                    ois.Enclos = elem
+                    elem.Ls_animaux.append(ois.Nom_animal)
             Ls_Animal_animal.append(ois)
 
 
@@ -135,7 +139,11 @@ class PopUpOiseau(QtWidgets.QDialog, InterfaceOiseau7.Ui_Dialog):
                 if ani.Id_animal == ois.Id_animal:
                     if success == True:
                         Ls_Animal_animal.remove(ani)
-                        Ls_Animal_animal.append(ois)
+                        for elem in Ls_Enclos:
+                            if elem.Id_enclos == self.popupOiseau.comboBox_enclos_animal.currentText():
+                                ois.Enclos = elem
+                                elem.Ls_animaux.append(ois.Nom_animal)
+                                Ls_Animal_animal.append(ois)
 
 
 

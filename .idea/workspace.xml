@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1e3a56f4-7ceb-4574-8b62-0f48d3194e6c" name="Changes" comment="Tout fini pratiquement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1234567 - dwa .json" beforeDir="false" afterPath="$PROJECT_DIR$/1234567 - dwa .json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PopUp_Oiseau.py" beforeDir="false" afterPath="$PROJECT_DIR$/PopUp_Oiseau.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PopUp_Poisson.py" beforeDir="false" afterPath="$PROJECT_DIR$/PopUp_Poisson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Popup_Animal.py" beforeDir="false" afterPath="$PROJECT_DIR$/Popup_Animal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Popup_Enclos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Popup_Enclos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Popup_Mammifere.py" beforeDir="false" afterPath="$PROJECT_DIR$/Popup_Mammifere.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enclos.py" beforeDir="false" afterPath="$PROJECT_DIR$/enclos.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,9 +310,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Zoo_pycharm$logique.coverage" NAME="logique Coverage Results" MODIFIED="1653400882175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Zoo_pycharm$main.coverage" NAME="main Coverage Results" MODIFIED="1653400935835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

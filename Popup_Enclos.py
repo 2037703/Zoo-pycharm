@@ -18,7 +18,7 @@ from Interface.InterfaceMenu import *
 from Interface import InterfaceEnclos10
 
 #Importation de la classe Enclos()
-
+import enclos
 from enclos import *
 
 # Importation des listes du fichier logique
@@ -35,7 +35,10 @@ def verifier_Id_enclos_liste(p_Id_enclos):
     """
     for ecl in Ls_Enclos:
         if ecl.Id_enclos == p_Id_enclos:
+
             return True
+
+
     return False
 
 def model_list_view_animaux(objet):
@@ -64,35 +67,52 @@ class PopUpEnclos(QtWidgets.QDialog, InterfaceEnclos10.Ui_Dialog):
         cacher_labels_erreur(self)
         model_list_view_animaux(self)
 
-        # #Rendue Ici essaie de transferrer les animaux dans la liste d'enclos
-        # for ani in Ls_Animal_animal:
-        #     Enclos.Ls_animaux.append(ani.Id_animal)
+        #Rendue Ici essaie de transferrer les animaux dans la liste d'enclos
+
 
     # Boutton créer pour créer un enclos
     @pyqtSlot()
     def on_button_creer_enclos_clicked(self):
+
         """
         Méthode du bouton creer pour créer un enclos
         :return: None
         """
+
         # Cacher les labels qui affichent les différentes erreurs
         cacher_labels_erreur(self)
+
+        # Vérifier le succès
+
+        success = True
+
+
         # Instancier un objet Eudiant
         enclos = Enclos()
         # Entrée de donnée pour les attributs de l'objet enclos
         enclos.Id_enclos = self.lineEdit_id_enclos.text()
+        if enclos.Id_enclos == "":
+            success = False
         enclos.Habitat_naturel = self.comboBox_habitat_enclos.currentText()
         enclos.Dimension = self.comboBox_dimension_enclos.currentText()
         # Booleen qui nous informe si le numéro de l'enclos existe ou pas dans la liste des enclos
         verifier_enclos = verifier_Id_enclos_liste(enclos.Id_enclos)
         if verifier_enclos is False:
+            if success == True:
 
 
-            # Ajouter l'objet instancié à la liste des enclos
-            Ls_Enclos.append(enclos)
+                # Ajouter l'objet instancié à la liste des enclos
+                Ls_Enclos.append(enclos)
 
-            # Réinitialiser les lineEdits du numéro d'enclos
-            self.lineEdit_id_enclos.clear()
+                # Réinitialiser les lineEdits du numéro d'enclos
+                self.lineEdit_id_enclos.clear()
+            else:
+                # Effacer le lineEdit du numéro d'enclos et afficher le message d'erreur
+                self.lineEdit_id_enclos.clear()
+                self.label_err_id_enclos.setVisible(True)
+
+
+
 
         else:
             # Effacer le lineEdit du numéro d'enclos et afficher le message d'erreur

@@ -44,24 +44,26 @@ def model_list_view_animaux(objet):
     objet.listView_animal.setModel(model)
     for ani in Ls_Animal_animal:
         if Dict_animal[type(ani)] == "Mammifère":
+
             item = QStandardItem("Id: " + ani.Id_animal + " * " + Dict_animal[type(ani)] +
                 " * " + ani.Nom_animal + " * " + ani.Couleur_mammifere + " * Poid:" +
                 str(ani.Poid_animal) + " Lbs * Gestation:" + str(ani.Temps_de_gestation) +
-             " mois * Régime:" + ani.Regime_animal + " * Enclos: " + str(ani.Enclos))
+             " mois * Régime:" + ani.Regime_animal + " * Enclos: " + str(ani.Enclos.__dict__))
+
             model.appendRow(item)
 
         elif Dict_animal[type(ani)] == "Poisson":
             item = QStandardItem("Id: " + ani.Id_animal + " * " + Dict_animal[
                 type(ani)] + " * " + ani.Nom_animal + " * Dent: " + ani.Machoire_dente + " * Poid:" + str(
                 ani.Poid_animal) + " Lbs * Longueur" + str(
-                ani.Longueur_poisson) + " po * Régime:" + ani.Regime_animal + " * Enclos: " + str(ani.Enclos))
+                ani.Longueur_poisson) + " po * Régime:" + ani.Regime_animal + " * Enclos: " + str(ani.Enclos.__dict__))
             model.appendRow(item)
 
         elif Dict_animal[type(ani)] == "Oiseau":
             item = QStandardItem("Id: " +ani.Id_animal + " * " + Dict_animal[type(ani)] +
                                  " * " + ani.Nom_animal + " * Couleur:" + ani.Couleur_plumage +
                                  " * Poid:" + str(ani.Poid_animal) + " Lbs * Grandeur:" + str(ani.Grandeur_oiseau) +
-                                 " cm * Régime:" + ani.Regime_animal + " * Enclos: " + str(ani.Enclos))
+                                 " cm * Régime:" + ani.Regime_animal + " * Enclos: " + str(ani.Enclos.__dict__))
             model.appendRow(item)
 def cacher_labels_erreur(objet):
     """
@@ -103,6 +105,8 @@ class PopUpAnimal(QtWidgets.QDialog, InterfaceAnimal7.Ui_Dialog):
         success2 = True
         success3 = True
 
+        # cacher les labels d'erreurs précédent
+        cacher_labels_erreur(self)
         # Si la comboBox choisie Mammifere
 
         if self.comboBox_Animal.currentText() == "Mammifère":

@@ -31,8 +31,8 @@ from mammifere import *
 #Import logique
 from logique import Dict_animal
 from logique import Ls_Animal_animal
+from logique import Ls_Enclos
 
-Enclos1 =Enclos()
 
 
 
@@ -93,10 +93,8 @@ class PopUpMammifere(QtWidgets.QDialog, InterfaceMammifere7.Ui_Mammifere):
         mam.Nom_animal = self.popupAnimal.lineEdit_nom_animal.text()
         mam.Poid_animal = float(self.popupAnimal.lineEdit_poid_animal.text())
         mam.Enclos = self.popupAnimal.comboBox_enclos_animal.currentText()
-        # for elem in Ls_Enclos:
-        #     if elem.Id_enclos == self.popupAnimal.comboBox_enclos_animal.currentText():
-        #         mam.Enclos = elem
-        #         elem.Ls_animaux.append(mam)
+
+
         mam.Regime_animal = self.popupAnimal.comboBox_regime_animal.currentText()
 
 
@@ -109,11 +107,17 @@ class PopUpMammifere(QtWidgets.QDialog, InterfaceMammifere7.Ui_Mammifere):
 
         # Ajouter l'objet instancié à la liste des enclos
         if success == True:
+            for elem in Ls_Enclos:
+                if elem.Id_enclos == self.popupAnimal.comboBox_enclos_animal.currentText():
+                    mam.Enclos = elem
+                    elem.Ls_animaux.append(mam.Nom_animal)
             Ls_Animal_animal.append(mam)
+
 
     # Boutton ajouter pour créer un mammifère
     @pyqtSlot()
     def on_button_modif_mammifere_clicked(self):
+
         """
         Méthode du bouton modifier pour modifier un modifier
         :return: None
@@ -152,7 +156,11 @@ class PopUpMammifere(QtWidgets.QDialog, InterfaceMammifere7.Ui_Mammifere):
                 if ani.Id_animal == mam.Id_animal:
                     if success == True:
                         Ls_Animal_animal.remove(ani)
-                        Ls_Animal_animal.append(mam)
+                        for elem in Ls_Enclos:
+                            if elem.Id_enclos == self.popupAnimal.comboBox_enclos_animal.currentText():
+                                mam.Enclos = elem
+                                elem.Ls_animaux.append(mam.Nom_animal)
+                                Ls_Animal_animal.append(mam)
 
 
     # Boutton supprimer pour supprimer un animal
@@ -262,21 +270,22 @@ class PopUpMammifere(QtWidgets.QDialog, InterfaceMammifere7.Ui_Mammifere):
 #########################
 ### Test des méthodes ###
 #########################
-
-    Mam1 = Mammifere("1234567", 5, "Chien", "aw", "Carnivore", "Bleu", 15)
-
-    #Test des set
-    Mam1.Temps_de_gestation = -1
-    Mam1.Couleur_mammifere = "blou"
-    Mam1.Regime_animal = "carnivore"
-    Mam1.Id_animal = "adw"
-    Mam1.Poid_animal = -1
-    Mam1.Nom_animal = 22
-
-#Test de sérialisation
-    # Mam1.serialiser("a")
-    # # print(result)
-    # Mam1.deserialiser("a", Enclos1)
+#     Enclos1 = Enclos()
+#
+#     Mam1 = Mammifere("1234567", 5, "Chien", "aw", "Carnivore", "Bleu", 15)
+#
+#     #Test des set
+#     Mam1.Temps_de_gestation = -1
+#     Mam1.Couleur_mammifere = "blou"
+#     Mam1.Regime_animal = "carnivore"
+#     Mam1.Id_animal = "adw"
+#     Mam1.Poid_animal = -1
+#     Mam1.Nom_animal = 22
+#
+# #Test de sérialisation
+#     # Mam1.serialiser("a")
+#     # # print(result)
+#     # Mam1.deserialiser("a", Enclos1)
 
 
 

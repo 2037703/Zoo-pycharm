@@ -51,19 +51,5 @@ class Enclos:
     Id_enclos = property(_get_id_enclos,_set_id_enclos)
 
 
-    ############################################
-    #####  MÉTHODES SPÉCIALES OU MAGIQUES  #####
-    ############################################
-    # Inspirer de Hasna Hocini
-    def __str__(self) :
-        """
-                Méthode spéciale d'affichage. À utiliser avec print(objet)
-                :return: Chaine à afficher
-        """
-        chaine = " "*60+"\n"+"*"*60+"\n\n"+"   L'id de l'enclos' : "+str(self.Id_enclos)+"\n"+\
-                 "   Habitat naturel : "+str(self.Habitat_naturel)+"\n"+\
-                "   Dimension de l'enclos : "+self.Dimension+"\n"+\
-                "   Ls_animaux : " + self.Ls_animaux + "\n\n" +"*"*60
-        return chaine
 
 
